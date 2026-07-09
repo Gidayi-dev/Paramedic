@@ -73,3 +73,42 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# WatermelonDB / SQLite local databases
+# (native builds/emulator runs can spit these out at the project root
+# or in test artifacts — you never want a paramedic's local DB in git)
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.db
+
+# Environment variables (mock server URL, API keys, config)
+.env
+.env.local
+.env.*.local
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# macOS
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Watchman
+.watchmanconfig.local
+
+# Logs
+*.log
+
+# Optional: if you add E2E testing later (Detox/Maestro)
+e2e/artifacts/
+.maestro/

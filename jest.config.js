@@ -1,3 +1,6 @@
 module.exports = {
-  preset: '@react-native/jest-preset',
+  preset: 'react-native',
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-native|@react-native|react-redux|@reduxjs/toolkit|immer|redux)/)',
+  ],
 };

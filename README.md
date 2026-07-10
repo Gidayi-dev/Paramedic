@@ -225,7 +225,7 @@ Test coverage includes:
 
 ## Demo
 
-[Link to demo video/GIF — add after recording]
+[[Link to demo video/GIF](https://drive.google.com/file/d/1KDriQk-grHw3Z96ioxiHqyoBqConb2QM/view?usp=sharing)]
 
 The demo shows: submitting a triage record while the emulator is in airplane mode (record saves locally, stays unsynced), then disabling airplane mode and observing the record automatically sync without any further user interaction.
 

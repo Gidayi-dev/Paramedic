@@ -228,10 +228,3 @@ Test coverage includes:
 [[Link to demo video/GIF](https://drive.google.com/file/d/1KDriQk-grHw3Z96ioxiHqyoBqConb2QM/view?usp=sharing)]
 
 The demo shows: submitting a triage record while the emulator is in airplane mode (record saves locally, stays unsynced), then disabling airplane mode and observing the record automatically sync without any further user interaction.
-
-## Known Limitations & Future Improvements
-
-- The mock API is purely local/simulated no real backend integration yet. Swapping in a real endpoint means replacing `mockApi.ts`'s `submitTriage()` body with an actual `fetch()` call; nothing else in the sync layer needs to change, since the rest of the app depends only on the shape of that function.
-- No retry backoff strategy failed records are retried on the next drain trigger (connectivity restore, app foreground, or manual submit), not on a timer. A production version would likely add exponential backoff for repeated failures.
-- No authentication/multi-user support out of scope for this assessment.
-- Android currently runs with the New Architecture enabled by default (see note above) despite the original intent to keep it off; this has not caused observed issues but is worth monitoring as WatermelonDB and React Native both continue to evolve.
